@@ -1,0 +1,11 @@
+variable "awsregion" {}
+variable "vpc_cidr" {}
+variable "vpc_name" {}
+variable "environment" {}
+variable "projid" {}
+variable "public_subnet_cidrs" {}
+variable "private_subnet_cidrs" {}
+variable "azs" {}
+variable "ami" {}
+variable "instance_type" {}
+variable "key_name" {}
