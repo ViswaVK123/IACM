@@ -5,7 +5,7 @@ locals {
 resource "aws_security_group" "SG-Dynamic" {
   name        = "Allow-All-SG-Dynamic"
   description = "allow all inbound traffic using dynamic"
-  vpc_id      = aws_vpc.Harness-VPC.
+  vpc_id      = aws_vpc.Harness-VPC.id
 
   dynamic "ingress" {
     for_each = local.ingress
