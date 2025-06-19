@@ -1,5 +1,5 @@
 resource "aws_route_table" "terraform-public" {
-  vpc_id = aws_vpc.Ansible-VPC.id
+  vpc_id = aws_vpc.Harness-VPC.id
 
   # route {
   #   cidr_block = "0.0.0.0/0"
@@ -21,7 +21,7 @@ resource "aws_route_table" "terraform-public" {
 resource "aws_route" "igw-route" {
   route_table_id         = aws_route_table.terraform-public.id
   destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = aws_internet_gateway.Ansible-IGW.id
+  gateway_id             = aws_internet_gateway.Harness-IGW.id
 }
 
 resource "aws_route_table_association" "terraform-public" {
@@ -34,7 +34,7 @@ resource "aws_route_table_association" "terraform-public" {
 
 
 resource "aws_route_table" "terraform-private" {
-  vpc_id = aws_vpc.Ansible-VPC.id
+  vpc_id = aws_vpc.Harness-VPC.id
 
   tags = {
     Name              = "${var.vpc_name}-Private-RT"

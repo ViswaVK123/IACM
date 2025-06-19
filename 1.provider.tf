@@ -11,10 +11,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "viswavk1308"
-    key            = "Ansible.tfstate"
+    bucket         = "viswakrishna1308"
+    key            = "harness-IACM-ec2.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "ViswaBuddi-Locks"
+    dynamodb_table = "Viswakrishna-LocksLockID"
     encrypt        = true
   }
 }

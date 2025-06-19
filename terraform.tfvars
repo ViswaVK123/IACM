@@ -1,6 +1,6 @@
 awsregion            = "us-east-1"
 vpc_cidr             = "10.40.0.0/16"
-vpc_name             = "VK13ansiblevpc"
+vpc_name             = "VK13Harnessvpc"
 environment          = "production"
 projid               = "PHOENIX-123"
 public_subnet_cidrs  = ["10.40.1.0/24", "10.40.2.0/24", "10.40.3.0/24", "10.40.4.0/24", "10.40.5.0/24", "10.40.6.0/24"]
@@ -15,4 +15,4 @@ instance_type = {
   production  = "t2.micro"
   testing     = "t2.micro"
 }
-key_name = "ansible"
+key_name = "Harness"

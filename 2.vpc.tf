@@ -1,4 +1,4 @@
-resource "aws_vpc" "Ansible-VPC" {
+resource "aws_vpc" "Harness-VPC" {
   cidr_block           = var.vpc_cidr
   enable_dns_hostnames = true
   tags = {
@@ -10,8 +10,8 @@ resource "aws_vpc" "Ansible-VPC" {
   }
 }
 
-resource "aws_internet_gateway" "Ansible-IGW" {
-  vpc_id = aws_vpc.Ansible-VPC.id
+resource "aws_internet_gateway" "Harness-IGW" {
+  vpc_id = aws_vpc.Harness-VPC.id
   tags = {
     Name              = "${var.vpc_name}-IGW"
     Terraform-Managed = "Yes"
