@@ -15,4 +15,4 @@ instance_type = {
   production  = "t2.micro"
   testing     = "t2.micro"
 }
-key_name = "Harness"
+key_name = "ekskey"
