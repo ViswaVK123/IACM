@@ -1,6 +1,6 @@
 resource "aws_subnet" "public-subnets" {
   count             = length(local.new_public_subnet_cidrs)
-  vpc_id            = aws_vpc.id
+  vpc_id            = aws_vpc.Harness-VPC.id
   cidr_block        = element(local.new_public_subnet_cidrs, count.index)
   availability_zone = element(var.azs, count.index)
 
